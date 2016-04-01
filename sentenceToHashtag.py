@@ -12,13 +12,19 @@ def sentence_to_hashtag(sentence):
     :param sentence: sentence
     :return: hashtag
     """
-    result = '#'
+    result = None
 
-    for word in sentence.split():
-        # clean non-alphabetic characters
-        aux = "".join([ch for ch in word if ch in ascii_letters])
+    if sentence and type(sentence) is str:
+        result = '#'
 
-        # add capitalize word
-        result += aux.title()
+        for word in sentence.split():
+            # clean non-alphabetic characters
+            aux = "".join([ch for ch in word if ch in ascii_letters])
+
+            # add capitalize word
+            result += aux.title()
+
+    if result == '#':
+        result = None
 
     return result
