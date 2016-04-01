@@ -2,7 +2,9 @@
 
 
 This function convert a sentence in a hashtag.
+
 Non-alphabetic characters are ignored.
+
 E.g. 'thi9s Is &&So cool' -> '#ThisIsSoCool'.
 
 
